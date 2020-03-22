@@ -1,0 +1,90 @@
+<!--pages/face_minute/face_minute.wxml 店铺详情-->
+<view class="all">
+  <view class="swiper">
+    <view bindtouchstart="duk_start" bindtouchmove="duk_move" bindtouchend="duk_end">
+      <image src="{{imgs[page]}}" catchtap="duk_onImg" data-num="{{page}}" data-img="{{imgs}}" style="width:100%;height:699rpx;"></image>
+    </view>
+  </view> 
+  <view class="flo_item"> 
+    <view class="flo_img" bindtap="duk_collect" data-id="{{cmId}}">
+      <image wx:if="{{!collect}}" src="../../images/commera/collect_none.png" class="fol_img_img1"></image>
+      <image wx:else src="../../images/commera/collect_it.png" class="fol_img_img1"></image>
+    </view>
+    <view class="flo_img" bindtap="duk_share">
+      <image src="../../images/commera/share.png" class="fol_img_img2"></image>
+    </view>
+  </view>
+  <view class="flo_time">
+    <view class="flo_time_img">
+      <image src="../../images/commera/time.png" class="flo_time_img_img"></image>
+    </view>
+    <view class="flo_time_text">{{com.startDate}}</view>
+    <view class="flo_time_text">开业</view>
+  </view>
+  <view class="flo_number"> 
+    <view class="flo_img">
+      <image src="../../images/commera/photo.png" class="fol_img_img"></image>
+    </view>
+    <view class="flo_text">{{page+1}}/{{pages}}</view>
+  </view>
+  <view class="comm_minute">
+    <view class="comm_item1">
+      <view class="comm_name"><view class="comm_name_text">{{com.name}}</view></view>
+      <view class="comm_score"><view class="comm_score_text1">{{com.score}}</view><view class="comm_score_text2">/5分</view></view>
+    </view>
+    <view class="comm_item2">
+      <view class="comm_item2_text1">营业时间</view>
+      <view class="comm_item2_text2">{{com.startTime}}-{{com.endTime}}</view>
+      <view class="comm_item2_img">
+        <image src="../../images/commera/call.png" class="comm_item2_img_img" bindtap="duk_call" data-call="{{com.call}}"></image>
+      </view>
+    </view>
+    <view class="comm_item3">
+      <view class="comm_item2_text1">{{com.city}}{{com.adress}}</view>
+    </view>
+    <view class="comm_item6">
+      <view style="height:8rpx"></view>
+      <view class="comm_item6_text1">{{com.descript}}</view>
+      <view style="height:10rpx"></view>
+    </view>
+    <view class="comm_no"></view>
+    <view class="comm_item7">
+      <view class="comm_item7_text1">我去过这里</view>
+      <view class="comm_item7_text2" bindtap="duk_comment_add" data-id="{{cmId}}">前往评价</view>
+      <view><image class="comm_item7_img" src="../../images/mine/right2.png" bindtap="duk_comment_add" data-id="{{cmId}}"></image></view>
+    </view>
+    <view class="comm_no"></view>
+    <view class="comm_item4">
+      <view class="comm_item4_text1">评价</view> 
+      <view class="comm_item4_text2" wx:if="{{com.good+com.bad<10000}}">{{com.good+com.bad}}</view>
+      <view class="comm_item4_text2" wx:else>9999+</view>
+      <view class="comm_item4_text3">条</view>
+      <view class="comm_item4_text4" bindtap="duk_comment" data-id="{{cmId}}">查看全部</view>
+      <view><image class="comm_item4_img" src="../../images/mine/right2.png" bindtap="duk_comment" data-id="{{cmId}}"></image></view>
+    </view>
+    <view wx:for="{{comm}}" wx:for-item="coe">
+    <view class="comm_item5">
+      <view style="height:10rpx"></view>
+      <view class="comm_item5_item1">
+        <view class="comm_item5_img"><image src="{{coe.img}}" class="comm_item5_img_img"></image></view>
+        <view class="comm_item5_text2">{{coe.name}}</view>
+      </view>
+      <view style="height:12rpx"></view>
+      <view class="comm_item5_text1">{{coe.text}}</view>
+      <view style="height:12rpx"></view>
+      <view class="comm_item5_coe" wx:if="{{coe.fileIDs!=0}}">
+        <view wx:for="{{coe.fileIDs}}" wx:key="{{index}}">
+        <view class="comm_item5_coe_v1">
+          <image src="{{item}}" catchtap="duk_onImg" data-num="{{index}}" data-img="{{coe.fileIDs}}" class="comm_item5_coe_img"></image>
+        </view>
+        </view>
+      </view>
+      <view style="height:12rpx"></view>
+      <view class="comm_item5_item2">
+        <view class="comm_item5_text3">{{coe.appraise}}</view>
+        <view class="comm_item5_text4">{{coe.time}}</view>
+      </view>
+    </view>
+    </view>
+  </view>
+</view>

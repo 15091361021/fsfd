@@ -1,0 +1,76 @@
+<view class="all"> 
+  <view class="all_alls">
+  <view class="all_item1">
+    <text class="all_item_text1">我的店名</text>  
+    <input type="text" class="all_item_input1" bindinput="cara_name"></input>
+  </view>
+  <view class="all_item1">
+    <text class="all_item_text1">所在地址</text>  
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" range-key="name">
+      <text type="text" class="all_item_text2">{{multiArray[0][multiIndex[0]].name}}{{multiArray[1].length > 0 ?(" " + multiArray[1][multiIndex[1]].name):""}}{{multiArray[2].length > 0 ?(" " + multiArray[2][multiIndex[2]].name):""}}</text>
+    </picker>
+  </view>
+  <view class="all_item1">
+    <text class="all_item_text1">详细地址</text>  
+    <input type="text" class="all_item_input1" bindinput="cara_adress"></input>
+  </view>
+  <view class="all_item1">
+    <text class="all_item_text1">简单描述</text>  
+    <input type="text" class="all_item_input1" bindinput="cara_descript"></input>
+  </view>
+  <view class="all_item1">
+    <text class="all_item_text1">开业时间</text>  
+    <picker mode="date" class='all_item1_picker' value="{{startDate}}" bindchange="duk_startDate">
+    <view class='input_date'>{{startDate}}</view>
+    </picker>
+  </view>
+  <view class="all_item1">
+    <text class="all_item_text1">营业时间</text>  
+    <picker mode="time" class='all_item1_picker' value="{{startTime}}" bindchange="duk_startTime">
+    <view class='input-city'>{{startTime}}</view>
+    </picker>
+    <view style="color:gray;">至</view>
+    <picker mode="time" class='all_item1_picker' value="{{endTime}}" bindchange="duk_endTime">
+    <view class='input-city'>{{endTime}}</view>
+    </picker>
+  </view>
+  <view class="all_item1">
+    <text class="all_item_text1">联系电话</text>  
+    <input type="text" class="all_item_input1" bindinput="care_call"></input>
+  </view>
+  <view class="all_item1">
+    <text class="all_item_text1">起步价格</text>  
+    <input type="text" class="all_item_input2" bindinput="cara_money"></input>￥
+  </view>
+  <view class="all_item1">
+    <text class="all_item_text1">所属类别</text>  
+    <view class='select_box'>
+      <view class='select' catchtap='selectTaps'>
+        <text class='select_text'>{{selectDatas[indexs]}}</text>
+        <image style="width:30rpx;height:30rpx;" src='{{img}}'></image>
+      </view>
+      <view class='option_box' style='height:{{shows?(selectDatas.length>5?300:selectDatas.length*60):0}}rpx;'>
+        <text class='option' style='{{indexs==selectDatas.length-1&&"border:0;"}}' wx:for='{{selectDatas}}' wx:key='this' data-index='{{index}}' catchtap='optionTaps'>{{item}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="all_item1">
+    <text class="all_item_text1">图片添加</text>  
+  </view>
+  </view>
+  <block wx:for="{{add_img}}" wx:key="{{index}}">
+  <view class='item'>
+    <image src='{{item}}' class='add' data-num="{{index}}" catchtap='duk_onImg'></image> 
+    <image src='../../images/mine/delete_img.png' data-num="{{index}}" class='delete_img' catchtap='duk_deleteImg'></image>
+  </view> 
+  </block>
+  <view class="send">
+    <image src="../../images/mine/add_img.png" class="add" bindtap='duk_addImg'></image>
+    <text class="img_text">(第一张为主图)</text>
+  </view>
+</view>
+<view class="bom">
+  <view class="send">
+    <button class="button" bindtap="duk_sub">提交</button>
+  </view>
+</view>

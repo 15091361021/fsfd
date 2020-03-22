@@ -1,0 +1,57 @@
+<!--pages/mine/mine.wxml我的-->
+<view class="tops">
+  <view class="img">
+    <image src='{{userInfo.avatarUrl}}' class="user_img"></image>
+  </view>
+  <view class="text">
+    <view class="user_name">{{userInfo.nickName}}</view> 
+  </view>
+</view>
+<view class="content">
+  <view class="item" bindtap='duk_collect'> 
+    <view class="item_item1">
+      <image src="../../images/mine/collect.png" class="item_item1_img"></image>
+    </view>
+    <view class="item_item2">
+      <view class="item_item2_text">我的收藏</view>
+      <view class="item_item2_img"><image src="../../images/mine/right2.png" class="item_item2_img_img"></image></view>
+    </view>
+  </view>
+  <view class="item" bindtap='duk_eval'> 
+    <view class="item_item1">
+      <image src="../../images/mine/eval.png" class="item_item1_img"></image>
+    </view>
+    <view class="item_item2">
+      <view class="item_item2_text">我的评论</view>
+      <view class="item_item2_img"><image src="../../images/mine/right2.png" class="item_item2_img_img"></image></view>
+    </view>
+  </view>
+  <view class="item" bindtap='duk_opinion'> 
+    <view class="item_item1">
+      <image src="../../images/mine/opinion.png" class="item_item1_img"></image>
+    </view>
+    <view class="item_item2">
+      <view class="item_item2_text">意见反馈</view>
+      <view class="item_item2_img"><image src="../../images/mine/right2.png" class="item_item2_img_img"></image></view>
+    </view>
+  </view>
+  <view class="item" bindtap='duk_news'> 
+    <view class="item_item1">
+      <image src="../../images/mine/mine_news.png" class="item_item1_img"></image>
+    </view>
+    <view class="item_item2">
+      <view class="item_item2_text">我的消息</view>
+      <view class="item_item2_img"><image src="../../images/mine/right2.png" class="item_item2_img_img"></image></view>
+    </view>
+  </view>
+  <view class="item_none"></view>
+  <view class="item" bindtap='duk_set'> 
+    <view class="item_item1">
+      <image src="../../images/mine/set.png" class="item_item1_img"></image>
+    </view>
+    <view class="item_item2">
+      <view class="item_item2_text">其他设置</view>
+      <view class="item_item2_img"><image src="../../images/mine/right2.png" class="item_item2_img_img"></image></view>
+    </view>
+  </view>
+</view>

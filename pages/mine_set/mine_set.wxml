@@ -1,0 +1,15 @@
+<!--pages/mine_set/mine_set.wxml其他设置-->
+<view class="all">
+  <view style="height:20rpx;"></view>
+  <view class="item" bindtap='duk_mine'>
+    <view class="tex">我的店铺</view>
+    <view><image src="../../images/mine/right2.png" class="imgs"></image></view>
+  </view>
+  <view class="item" bindtap='duk_add'>
+    <view class="tex">添加店铺</view>
+    <view><image src="../../images/mine/right2.png" class="imgs"></image></view>
+  </view>
+  <view class="bunk">
+    <text class="text2">退出登录</text>
+  </view>
+</view>

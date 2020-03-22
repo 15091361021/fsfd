@@ -1,0 +1,40 @@
+<!--pages/comm_comment_add/comm_comment_add.wxml 商铺评论-->
+<view class="all">
+  <view class="top">
+    <view class="top_text">我的评论</view>
+  </view>
+  <view class="comm_no"></view>
+  <view class="comm_no1"></view>
+  <view class="cont">
+    <view class="cont_text">
+      <textarea class="input" maxlength="100" placeholder="填写您的评价内容(1-100字)" bindinput="duk_input"></textarea>
+    </view>
+  </view>
+  <view class="comm_no1"></view>
+  <view class="bind">
+    <view class="bind_text">点评</view>
+    <view class="bind_radio">
+      <radio-group bindchange="duk_radio">
+        <radio value="好评">好评</radio>
+        <radio value="差评" style="margin-left:20rpx">差评</radio>
+      </radio-group>
+    </view>
+  </view>
+  <view class="comm_no1"></view>
+  <view class="comm_no2"></view>
+  <view class="image">
+    <view class="comm_no1"></view>
+    <view>添加照片</view>
+    <block wx:for="{{add_img}}" wx:key="{{index}}">
+    <view class='image_item'>
+      <image src='{{item}}' class='image_add' data-num="{{index}}" catchtap='duk_onImg'></image>   
+      <image src='../../images/mine/delete_img.png' data-num="{{index}}" class='image_delete_img' catchtap='duk_deleteImg'></image>
+    </view> 
+    </block>
+    <view class="image_send">
+      <image src="../../images/mine/add_img.png" class="image_add" bindtap='duk_addImg'></image>
+    </view>
+  </view>
+  <view class="comm_no1"></view>
+  <button class="button" bindtap="duk_sub">发布评论</button>
+</view>

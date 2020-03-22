@@ -1,0 +1,36 @@
+<!--pages/mine_news/mine_news.wxml 我的消息-->
+<view class="all">
+  <view wx:for="{{news}}" wx:for-item="new">
+    <view style=" height:20rpx"></view>
+    <view class="item">
+      <view class="item_title">
+        <view class="item_v">
+          <text class="text1">来自：</text>
+          <text class="text2">{{new.send}}</text>
+        </view>
+        <view class="item_v" wx:if="{{new.news==0}}">
+          <image class="news_img" src="../../images/img4/news.png"></image>
+        </view>
+        <view class="item_v" wx:else>
+          <image class="news_img" src=""></image>
+        </view>
+      </view>
+      <view class="item_text">
+        <text class="text3" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{new.opinionTexts}}</text>
+      </view>
+      <view style="height:20rpx"></view>
+      <view class="item_bottom">
+        <button class="button1" bindtap="duk_recive" data-id="{{new._openid}}" data-name="{{new.send}}">回复</button>
+        <button class="button2" bindtap="duk_delete" data-id="{{new._id}}">删除</button>
+        <view wx:if="{{new.news==0}}">
+          <button class="button3" bindtap="duk_alredy" data-id="{{new._id}}">标为已读</button>
+        </view>
+        <view wx:else>
+          <button class="button4" bindtap="duk_no" data-id="{{new._id}}">标为未读</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="height:40rpx"></view>
+  <button bindtap="duk_all">全部已读</button>
+</view>

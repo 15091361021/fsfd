@@ -1,0 +1,46 @@
+<view class="all">
+  <view wx:for="{{comm}}" wx:for-item="com">
+  <view class="order">
+    <view class="com_left" bindtap="duk_minute" data-id="{{com._id}}">
+      <image src="{{com .fileIDs[0]}}" class="com"></image>
+    </view>
+    <view class="com_right">
+      <view class="com_name">{{com.name}}</view>
+      <view class="com_site">
+        <view class="com_xin">
+          <image wx:if="{{com.score<0.8}}" src="../../images/commera/xin1.png" style="width:100%;height:100%;"></image>
+          <image wx:else src="../../images/commera/xin2.png" style="width:100%;height:100%;"></image>
+        </view>
+        <view class="com_xin">
+          <image wx:if="{{com.score<1.8}}" src="../../images/commera/xin1.png" style="width:100%;height:100%;"></image>
+          <image wx:else src="../../images/commera/xin2.png" style="width:100%;height:100%;"></image>
+        </view>
+        <view class="com_xin">
+          <image wx:if="{{com.score<2.8}}" src="../../images/commera/xin1.png" style="width:100%;height:100%;"></image>
+          <image wx:else src="../../images/commera/xin2.png" style="width:100%;height:100%;"></image>
+        </view>
+        <view class="com_xin">
+          <image wx:if="{{com.score<3.8}}" src="../../images/commera/xin1.png" style="width:100%;height:100%;"></image>
+          <image wx:else src="../../images/commera/xin2.png" style="width:100%;height:100%;"></image>
+        </view>
+        <view class="com_xin">
+          <image wx:if="{{com.score<4.8}}" src="../../images/commera/xin1.png" style="width:100%;height:100%;"></image>
+          <image wx:else src="../../images/commera/xin2.png" style="width:100%;height:100%;"></image>
+        </view>
+        <view class="com_site_text">{{com.score}}分</view>
+      </view>
+      <view class="com_adrees">{{com.city}}{{com.adress}}</view>
+      <view class="com_money">
+        <view class="com_money_left">￥</view>
+        <view class="com_money_right">{{com.money}}</view>
+        <view class="com_money_text">起</view>
+      </view>
+      <view class="com_pop">
+        <view class="com_pop1" wx:if="{{com.good+com.bad<1000}}">{{com.good+com.bad}}</view>
+        <view class="com_pop1" wx:else>999+</view>
+        <view class="com_pop2">条评价</view>
+      </view>
+    </view>
+  </view>
+  </view>
+</view>

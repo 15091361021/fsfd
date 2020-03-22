@@ -1,0 +1,209 @@
+/* pages/face/face.wxss */
+.top{
+  height: 200rpx;
+  background: #cc0000;
+  z-index: -1;
+}
+.place{
+  margin-left: 2%;
+  margin-top: 24rpx;
+  width: 13%;
+  float: left;
+  font-size:30rpx;
+  color: white;
+  text-align: center;
+  /* border: 1px red solid; */
+}
+.top_img{
+  margin-top: 26rpx;
+  width: 32rpx;
+  height: 32rpx;
+  float: left;
+  /* border: 1px red solid; */
+}
+.search{
+  /* border: 1px red solid; */
+  height: 70rpx;
+  width:65%;
+  float: left;
+  margin-left: 4%;
+  margin-top: 12rpx;
+  border-radius: 30rpx;
+  background: white;
+}
+.dexs{
+  height: 93rpx;
+  background-color: #F4F4F4;
+}
+.text-help{
+  width: 100%;
+  font-size: 26rpx;
+  color: red;
+  text-align: center;
+  background-color: #F4F4F4;
+  /* border: 1px red solid;  */
+}
+.content{
+  width: 100%;
+  height: 100%;
+  background-color: #F4F4F4;
+  /* border: 1rpx red solid; */
+}
+.order1{
+  width: 96%;
+  height: 170rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  text-align: center;
+  position: absolute;
+  top: 110rpx;
+  font-size: 24rpx;
+  margin-left: 2%;
+  /* border: 1rpx red solid; */
+}
+.o1_vx{
+  width: 20%;
+  float: left;
+  margin-top: 20rpx;
+  /* border: 1rpx red solid; */
+}
+.o1_v{
+  width: 100%;
+  height: 100rpx;
+  margin-top: 10rpx;
+}
+.o1_img0{
+  width: 70rpx;
+  height: 80rpx;
+}
+.o1_img1{
+  width: 64rpx;
+  height: 64rpx;
+  margin-left: 56%;
+  margin-top: 20rpx;
+}
+.order3{
+  width: 94%;
+  height: 290rpx;
+  margin-top: 30rpx;
+  display: flex;
+  background-color: #ffffff;   
+  border-radius: 10rpx;
+  margin-left: 3%;
+  /* border: 1rpx red solid; */
+}
+.swiper{
+  margin-top: 6rpx;
+  margin-left: 3%;
+  height: 300rpx;
+  width: 94%;
+  /* border: 1rpx red solid; */
+}
+.com_left{
+  margin-left: 2%;
+  width: 38%;
+  height: 260rpx;
+  align-items: center;
+  text-align: center;
+  margin-top: 10rpx;
+  /* border: 1px red solid; */
+}
+.com_right{
+  width: 57%;
+  height: 260rpx;
+  margin-top: 10rpx;
+  /* border: 1px red solid; */
+}
+.com{
+  width: 94%;
+  height: 98%;
+}
+.com_name{
+  width: 97%;
+  height: 20%;
+  margin-left: 2%;
+  font-size: 32rpx;
+  /* border: 1px red solid; */
+}
+.com_site{
+  width: 97%;
+  height: 20%;
+  margin-left: 2%;
+  font-size: 12px;
+  color: gray;
+  display: flex;
+  /* border: 1px red solid; */
+}
+.com_xin{
+  width: 40rpx;
+  height: 40rpx;
+}
+.com_site_text{
+  margin-top: 6rpx;
+  margin-left: 8rpx;
+  color: red;
+  width: 60rpx;
+  height: 40rpx;
+}
+.com_adrees{
+  width: 97%;
+  height: 25%;
+  margin-left: 2%;
+  font-size: 24rpx;
+  color: gray;
+  /* border: 1px red solid; */
+}
+.com_money{
+  width: 97%;
+  height: 18%;
+  margin-left: 2%;
+  display: flex;
+  /* border: 1px red solid; */
+}
+.com_money_left{
+  width: 24rpx;
+  height: 60%;
+  font-size: 20rpx;
+  margin-top: 8rpx;
+  color: red;
+  /* border: 1px red solid; */
+}
+.com_money_right{
+  height: 98%;
+  color: red;
+  /* border: 1px red solid; */
+}
+.com_money_text{
+  width: 40rpx;
+  height: 60%;
+  font-size: 24rpx;
+  margin-top: 8rpx;
+  color: grey;
+  /* border: 1px red solid; */
+}
+.com_pop{
+  width: 97%;
+  height: 22%;
+  margin-left: 2%;
+  font-size: 24rpx;
+  display: flex;
+  /* border: 1px red solid; */
+}
+.com_pop1{
+  height: 40rpx;
+  width: 80rpx;
+  margin-top: 3rpx;
+  margin-left: 220rpx;
+  text-align:right;
+  color: red;
+  /* border: 1px red solid; */
+}
+.com_pop2{
+  margin-left: 5rpx;
+  height: 40rpx;
+  margin-top: 3rpx;
+  text-align: center;
+  /* border: 1px red solid; */
+}

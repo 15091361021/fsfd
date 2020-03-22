@@ -1,0 +1,39 @@
+/* pages/mine_set/mine_set.wxss */
+.all{
+  width: 100%;
+  height: 1205rpx;
+  background-color: #F4F4F4;
+}
+.item{
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  height:90rpx;
+  align-items: center;
+  border-bottom: 5rpx #F4F4F4 solid;
+}
+.imgs{
+  width: 30rpx;
+  height: 28rpx;
+  margin-left: 513rpx;
+}
+.tex{
+  font-size: 28rpx;
+  margin-left: 45rpx;
+}
+.bunk{
+  width: 96%;
+  height: 60rpx;
+  align-items: center;
+  margin-top: 20rpx;
+  margin-left: 2%;
+  display: flex;
+  /* flex-direction: row; */
+  background-color: #ffffff;
+  /* border: 1rpx red solid; */
+}
+.text2{
+  font-size: 28rpx;
+  margin-left: 305rpx;
+  /* border: 1rpx red solid; */
+}

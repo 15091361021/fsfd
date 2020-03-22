@@ -1,0 +1,7 @@
+<!--pages/test5/test5.wxml-->
+
+<view class="flex-box">
+  <button bindtap="duk_call">拨打电话</button>
+</view>
+
+

@@ -1,0 +1,93 @@
+/* pages/mine_news/mine_news.wxss */
+.all {
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+}
+
+.item{
+  width: 96%;
+  /* height: 310rpx; */
+  margin-left: 2%;
+  border-radius: 10rpx;
+  background-color: white;
+  /* border: 1rpx red solid; */
+}
+.item_title{
+  width: 96%;
+  margin-left: 2%;
+  height: 50rpx;
+  border-bottom: 1rpx #f4f4f4 solid;
+  /* border: 1rpx red solid; */
+}
+.item_v{
+  width: 50%;
+  float: left;
+  /* border: 1rpx red solid; */
+}
+.news_img{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 310rpx;
+  margin-top: 5rpx;
+  /* border: 1rpx red solid; */
+}
+.text1{
+  width: 26rpx;
+  font-size: 25rpx;
+  /* border: 1rpx red solid; */
+}
+.text2{
+  width: 26rpx;
+  font-size: 25rpx;
+  color: gray;
+  /* border: 1rpx red solid; */
+}
+.text3{
+  font-size: 25rpx;
+  color: gray;
+}
+.item_text{
+  width: 96%;
+  margin-left: 2%;
+  border-bottom: 1rpx #f4f4f4 solid;
+  /* height: 210rpx; */
+  /* border: 1rpx red solid; */
+}
+.item_bottom{
+  width: 100%;
+  height: 60rpx;
+  /* border: 1rpx red solid; */
+}
+.button1{
+  width: 15%;
+  height: 50rpx;
+  font-size: 20rpx;
+  margin-left: 45%;
+  float: left;
+  background-color: #00BB00;
+}
+.button2{
+  width: 15%;
+  height: 50rpx;
+  font-size: 20rpx;
+  margin-left: 12rpx;
+  float: left;
+  background-color: red;
+}
+.button3{
+  width: 19%;
+  height: 50rpx;
+  font-size: 20rpx;
+  margin-left: 12rpx;
+  float: left;
+  background-color: yellow;
+}
+.button4{
+  width: 19%;
+  height: 50rpx;
+  font-size: 20rpx;
+  margin-left: 12rpx;
+  float: left;
+  background-color: orange;
+}

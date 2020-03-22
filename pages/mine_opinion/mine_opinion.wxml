@@ -1,0 +1,16 @@
+<!--pages/mine_opinion/mine_opinion.wxml 意见反馈-->
+<view class="all">
+  <view style="height:20rpx"></view>
+  <view>
+    <text class="text">我的意见</text>
+  </view>
+  <view style="height:20rpx"></view>
+  <view>
+    <textarea class="input" maxlength="120" placeholder="填写内容(1-120字)" bindinput="duk_input"></textarea>
+  </view>
+  <view style="height:50rpx"></view>
+  <view>
+    <button class="button" bindtap="duk_sub">提交</button>
+  </view>
+  <view style="height:50rpx"></view>
+</view>

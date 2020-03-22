@@ -1,0 +1,130 @@
+/* pages/face_shop/face_shop.wxss */
+.all{
+  width: 100%;
+  height: 100%;
+}
+.order{
+  width: 94%;
+  height: 290rpx;
+  margin-top: 30rpx;
+  display: flex;
+  background-color: #ffffff;   
+  border-radius: 10rpx;
+  margin-left: 3%;
+  border-bottom: 1rpx #F4F4F4 solid;
+  /* border: 1rpx red solid; */
+}
+.swiper{
+  margin-top: 6rpx;
+  margin-left: 3%;
+  height: 300rpx;
+  width: 94%;
+  /* border: 1rpx red solid; */
+}
+.com_left{
+  margin-left: 2%;
+  width: 38%;
+  height: 260rpx;
+  align-items: center;
+  text-align: center;
+  margin-top: 10rpx;
+  /* border: 1px red solid; */
+}
+.com_right{
+  width: 57%;
+  height: 260rpx;
+  margin-top: 10rpx;
+  /* border: 1px red solid; */
+}
+.com{
+  width: 94%;
+  height: 98%;
+}
+.com_name{
+  width: 97%;
+  height: 20%;
+  margin-left: 2%;
+  font-size: 32rpx;
+  /* border: 1px red solid; */
+}
+.com_site{
+  width: 97%;
+  height: 20%;
+  margin-left: 2%;
+  font-size: 12px;
+  color: gray;
+  display: flex;
+  /* border: 1px red solid; */
+}
+.com_xin{
+  width: 40rpx;
+  height: 40rpx;
+}
+.com_site_text{
+  margin-top: 6rpx;
+  margin-left: 8rpx;
+  color: red;
+  width: 60rpx;
+  height: 40rpx;
+}
+.com_adrees{
+  width: 97%;
+  height: 25%;
+  margin-left: 2%;
+  font-size: 24rpx;
+  color: gray;
+  /* border: 1px red solid; */
+}
+.com_money{
+  width: 97%;
+  height: 18%;
+  margin-left: 2%;
+  display: flex;
+  /* border: 1px red solid; */
+}
+.com_money_left{
+  width: 24rpx;
+  height: 60%;
+  font-size: 20rpx;
+  margin-top: 8rpx;
+  color: red;
+  /* border: 1px red solid; */
+}
+.com_money_right{
+  height: 98%;
+  color: red;
+  /* border: 1px red solid; */
+}
+.com_money_text{
+  width: 40rpx;
+  height: 60%;
+  font-size: 24rpx;
+  margin-top: 8rpx;
+  color: grey;
+  /* border: 1px red solid; */
+}
+.com_pop{
+  width: 97%;
+  height: 22%;
+  margin-left: 2%;
+  font-size: 24rpx;
+  display: flex;
+  /* border: 1px red solid; */
+}
+.com_pop1{
+  height: 40rpx;
+  width: 80rpx;
+  margin-top: 3rpx;
+  margin-left: 220rpx;
+  text-align:right;
+  color: red;
+  /* border: 1px red solid; */
+}
+.com_pop2{
+  margin-left: 5rpx;
+  height: 40rpx;
+  margin-top: 3rpx;
+  text-align: center;
+  /* border: 1px red solid; */
+}
+

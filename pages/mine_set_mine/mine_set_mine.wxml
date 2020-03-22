@@ -1,0 +1,53 @@
+<!--pages/mine_set_mine/mine_set_mine.wxml-->
+<view class="all">
+  <view style="height:20rpx;"></view>
+  <view wx:for="{{comms}}" wx:for-item="coms">
+    <view class="mine">
+      <view class="item1">
+        <view class="com_left">
+          <image src="{{coms.fileIDs[0]}}" class="com"></image>
+        </view>
+        <view class="com_right">
+          <view class="com_name">{{coms.name}}</view>
+          <view class="com_site">
+            <view class="com_xin" wx:if="{}">
+              <image src="../../images/commera/xin1.png" style="width:100%;height:100%;"></image>
+            </view>
+            <view class="com_xin">
+              <image src="../../images/commera/xin1.png" style="width:100%;height:100%;"></image>
+            </view>
+            <view class="com_xin">
+              <image src="../../images/commera/xin1.png" style="width:100%;height:100%;"></image>
+            </view>
+            <view class="com_xin">
+              <image src="../../images/commera/xin1.png" style="width:100%;height:100%;"></image>
+            </view>
+            <view class="com_xin">
+              <image src="../../images/commera/xin1.png" style="width:100%;height:100%;"></image>
+            </view>
+            <view class="com_site_text">4.7分</view>
+          </view>
+          <view class="com_adrees">{{coms.city}}{{coms.adress}}</view>
+          <!-- <view class="com_dis">简介</view> -->
+          <view class="com_money">
+            <view class="com_money_left">￥</view>
+            <view class="com_money_right">{{coms.money}}</view>
+            <view class="com_money_text">起</view>
+          </view>
+          <view class="com_pop">
+            <view class="com_pop1">好评</view>
+            <view class="com_pop2">{{coms.good}}</view>
+            <view class="com_pop1">差评</view>
+            <view class="com_pop2">{{coms.bad}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="item2">
+        <button class="button" bindtap="duk_update" data-id="{{coms._id}}">修改</button>
+        <button class="button" bindtap="duk_delete" data-id="{{coms._id}}">删除</button>
+      </view>
+    </view>
+    <view style="height:30rpx;"></view>
+  </view>
+  <view style="height:100rpx;"></view>
+</view>

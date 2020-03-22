@@ -1,0 +1,71 @@
+{
+  "pages": [
+    
+    
+    
+    "pages/face/face",
+    "pages/mine/mine",
+
+
+    "pages/face_city/face_city",
+    "pages/acm/acm",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/comm_comment/comm_comment",
+    "pages/comm_comment_add/comm_comment_add",
+    "pages/face_item/face_item",
+    "pages/face_minute/face_minute",
+ 
+    "pages/mine_collect/mine_collect",
+    "pages/mine_comment/mine_comment",
+    "pages/mine_opinion/mine_opinion",
+    "pages/mine_news/mine_news",
+    "pages/mine_set/mine_set",
+    "pages/mine_set_mine/mine_set_mine",
+    "pages/mine_set_add/mine_set_add",
+    "pages/mine_news_recive/mine_news_recive",
+
+    "pages/test/test",
+    "pages/test1/test1",
+    "pages/test2/test2",
+    "pages/test3/test3",
+    "pages/test4/test4",
+    "pages/test5/test5"
+    
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#cc0000",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true, 
+    "backgroundTextStyle": "dark"
+    
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#ff0000",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/face/face",
+        "text": "首页",
+        "iconPath": "images/bar/s1.png",
+        "selectedIconPath": "images/bar/s2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/bar/o1.png",
+        "selectedIconPath": "images/bar/o2.png"
+      }  
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于寻找附近的检测点"
+    }
+  },
+  "debug":true,
+  "cloud": true
+}

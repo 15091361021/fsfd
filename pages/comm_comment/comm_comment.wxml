@@ -1,0 +1,37 @@
+<!--pages/comm_comment/comm_comment.wxml评论主页-->
+<view class="all">
+  <view class="top">
+    <view class="top_item">
+      <button wx:if="{{style1==0}}" class="buton1" bindtap="duk_all">全部评价</button>
+      <button wx:if="{{style1==1}}" class="buton2" bindtap="duk_all">全部评价</button>
+      <button wx:if="{{style2==0}}" class="buton1" bindtap="duk_good">好评</button>
+      <button wx:if="{{style2==1}}" class="buton2" bindtap="duk_good">好评</button>
+      <button wx:if="{{style3==0}}" class="buton1" bindtap="duk_bad">差评</button>
+      <button wx:if="{{style3==1}}" class="buton2" bindtap="duk_bad">差评</button>
+    </view>
+  </view> 
+  <view wx:for="{{comm}}" wx:for-item="coe">
+    <view class="comm_item">
+      <view style="height:24rpx"></view>
+      <view class="comm_item_item1">
+        <view class="comm_item_img"><image src="{{coe.img}}" class="comm_item_img_img"></image></view>
+        <view class="comm_item_text2">{{coe.name}}</view>
+      </view>
+      <view style="height:24rpx"></view>
+      <view class="comm_item_text1">{{coe.text}}</view>
+      <view style="height:12rpx"></view>
+      <view class="comm_item_coe" wx:if="{{coe.fileIDs!=0}}">
+        <view wx:for="{{coe.fileIDs}}" wx:key="{{index}}">
+        <view class="comm_item_coe_v1">
+          <image src="{{item}}" catchtap="duk_onImg" data-num="{{index}}" data-img="{{coe.fileIDs}}" class="comm_item_coe_img"></image>
+        </view>
+        </view>
+      </view>
+      <view style="height:12rpx"></view>
+      <view class="comm_item_item2">
+        <!-- <view class="comm_item_text3">{{coe.appraise}}</view> -->
+        <view class="comm_item_text4">{{coe.time}}</view>
+      </view>
+    </view>
+    </view>
+</view>

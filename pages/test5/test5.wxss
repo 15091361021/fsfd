@@ -1,0 +1,27 @@
+/* pages/test5/test5.wxss */
+.flex-box {
+  display: flex;
+  flex-direction: row;
+  border-bottom: #ccc solid 1px;
+  margin-top: 30rpx;
+  margin-left: 65rpx;
+  width: 600rpx;
+  padding: 10rpx;
+  height: 70rpx;
+}
+
+.flex-box-header {
+  width: 25%;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  color: #999;
+  /* line-height: 60rpx; */
+}
+
+
+.flex-box-content-pricker {
+  margin-top: 0rpx;
+  width: 70%;
+  font-size: 45rpx;
+}
+

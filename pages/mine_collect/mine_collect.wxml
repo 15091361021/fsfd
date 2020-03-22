@@ -1,0 +1,36 @@
+<!--pages/mine_collect/mine_collect.wxml我的收藏-->
+<view class="all">
+  <view style="height:10rpx"></view>
+  <view wx:if="{{coll == ''}}" class="all_text">暂时没有记录</view>
+  <view wx:for="{{coll}}" wx:for-item="col">
+    <view style="height:12rpx"></view>
+    <view class="item">
+      <view class="item_item1" bindtap="duk_minute" data-id="{{col._id}}">
+        <image src="{{col.fileIDs[0]}}" class="item_item1_img"></image>
+      </view>
+      <view class="item_item2">
+        <view class="item_item2_item1">
+          <view class="item_item2_item1_text">{{col.name}}</view>
+          <view class="item_item2_item1_button" bindtap="duk_delete" data-colid="{{col.col_id}}">删除</view>
+        </view>
+        <view class="item_item2_item2">
+          <view class="item_item2_item2_item1">
+            <image wx:if="{{col.score<0.8}}" src="../../images/commera/xin1.png" style="width:30rpx;height:30rpx;"></image>
+            <image wx:else src="../../images/commera/xin2.png" style="width:30rpx;height:30rpx;"></image>
+            <image wx:if="{{col.score<1.8}}" src="../../images/commera/xin1.png" style="width:30rpx;height:30rpx;"></image>
+            <image wx:else src="../../images/commera/xin2.png" style="width:30rpx;height:30rpx;"></image>
+            <image wx:if="{{col.score<2.8}}" src="../../images/commera/xin1.png" style="width:30rpx;height:30rpx;"></image>
+            <image wx:else src="../../images/commera/xin2.png" style="width:30rpx;height:30rpx;"></image>
+            <image wx:if="{{col.score<3.8}}" src="../../images/commera/xin1.png" style="width:30rpx;height:30rpx;"></image>
+            <image wx:else src="../../images/commera/xin2.png" style="width:30rpx;height:30rpx;"></image>
+            <image wx:if="{{col.score<4.9}}" src="../../images/commera/xin1.png" style="width:30rpx;height:30rpx;"></image>
+            <image wx:else src="../../images/commera/xin2.png" style="width:30rpx;height:30rpx;"></image>
+          </view>
+          <view class="item_item2_item2_item2">{{col.score}}</view>
+          <view class="item_item2_item2_item3">分</view>
+        </view>
+        <view class="item_item2_item3">{{col.city}}{{col.adress}}</view>
+      </view>
+    </view>
+  </view>
+</view>

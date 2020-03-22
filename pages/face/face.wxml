@@ -1,0 +1,116 @@
+<!--pages/face/face.wxml首页-->
+<view class="top">
+  <view class="place" bindtap='bindcity'>{{city}}</view>
+  <view bindtap='duk_city' bindtap='bindcity'>
+    <image src="../../images/img1/bottom.png" class="top_img"></image>
+  </view>
+  <view> 
+    <input type="text" class="search" placeholder-class="input-placeholder"></input>
+  </view>
+</view> 
+<view class="content">
+  <view class="order1">
+    <view class="o1_v">
+      <view class="o1_vx">
+        <view bindtap="duk_item" data-kinds="景点">
+          <view class="o1_img0">
+            <image src="../../images/img1/jd2.png" class="o1_img1"></image>
+          </view>
+          <view>景点</view>
+        </view>
+      </view>
+      <view class="o1_vx">
+        <view bindtap="duk_item" data-kinds="餐饮">
+          <view class="o1_img0">
+            <image src="../../images/img1/cy2.png" class="o1_img1"></image>
+          </view>
+          <view>餐饮</view>
+        </view>
+      </view>
+      <view class="o1_vx">
+        <view bindtap="duk_item" data-kinds="酒店">
+          <view class="o1_img0">
+            <image src="../../images/img1/zs.png" class="o1_img1"></image>
+          </view>
+          <view>酒店</view>
+        </view>
+      </view>
+      <view class="o1_vx">
+        <view bindtap="duk_item" data-kinds="娱乐">
+          <view class="o1_img0">
+            <image src="../../images/img1/yl.png" class="o1_img1"></image>
+          </view>
+          <view>娱乐</view>
+        </view>
+      </view>
+      <view class="o1_vx">
+        <view bindtap="duk_item" data-kinds="购物">
+          <view class="o1_img0">
+            <image src="../../images/img1/gw.png" class="o1_img1"></image>
+          </view>
+          <view>购物</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="dexs"></view>
+  <view class="text-help">在{{city}}，小易会时刻陪着您，期待为您服务哦</view>
+  <view></view>
+  <view class="swiper">
+    <swiper indicator-dots='true' circular='true' autoplay='true' interval='5000' duration='1000' style="display:block;">
+      <swiper-item>
+        <image src="../../images/img1/top1.jpg" style="width:100%;"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="../../images/img1/top2.jpg" style="width:100%;"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="../../images/img1/top3.jpg" style="width:100%;"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view wx:for="{{comm}}" wx:for-item="com">
+    <view class="order3">
+      <view class="com_left" bindtap="duk_minute" data-id="{{com._id}}">
+        <image src="{{com .fileIDs[0]}}" class="com"></image>
+      </view>
+      <view class="com_right">
+        <view class="com_name">{{com.name}}</view>
+        <view class="com_site">
+          <view class="com_xin">
+            <image wx:if="{{com.score<0.8}}" src="../../images/commera/xin1.png" style="width:100%;height:100%;"></image>
+            <image wx:else src="../../images/commera/xin2.png" style="width:100%;height:100%;"></image>
+          </view>
+          <view class="com_xin">
+            <image wx:if="{{com.score<1.8}}" src="../../images/commera/xin1.png" style="width:100%;height:100%;"></image>
+            <image wx:else src="../../images/commera/xin2.png" style="width:100%;height:100%;"></image>
+          </view>
+          <view class="com_xin">
+            <image wx:if="{{com.score<2.8}}" src="../../images/commera/xin1.png" style="width:100%;height:100%;"></image>
+            <image wx:else src="../../images/commera/xin2.png" style="width:100%;height:100%;"></image>
+          </view>
+          <view class="com_xin">
+            <image wx:if="{{com.score<3.8}}" src="../../images/commera/xin1.png" style="width:100%;height:100%;"></image>
+            <image wx:else src="../../images/commera/xin2.png" style="width:100%;height:100%;"></image>
+          </view>
+          <view class="com_xin">
+            <image wx:if="{{com.score<4.8}}" src="../../images/commera/xin1.png" style="width:100%;height:100%;"></image>
+            <image wx:else src="../../images/commera/xin2.png" style="width:100%;height:100%;"></image>
+          </view>
+          <view class="com_site_text">{{com.score}}分</view>
+        </view>
+        <view class="com_adrees">{{com.city}}{{com.adress}}</view>
+        <view class="com_money">
+          <view class="com_money_left">￥</view>
+          <view class="com_money_right">{{com.money}}</view>
+          <view class="com_money_text">起</view>
+        </view>
+        <view class="com_pop">
+          <view class="com_pop1" wx:if="{{com.good+com.bad<1000}}">{{com.good+com.bad}}</view>
+          <view class="com_pop1" wx:else>999+</view>
+          <view class="com_pop2">条评价</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
